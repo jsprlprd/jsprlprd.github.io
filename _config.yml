@@ -1,6 +1,7 @@
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+title: "Jasper Lepardo | Interface Designer & Experience Crafter" # the name of your site, e.g. ACME Corp.
+description: I'm an Interface Designer and Experience Crafter based in Philippines. Over the past four years, I've designed products and helped tailor experiences for some amazing brands.
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -18,3 +19,12 @@ sass:
   style: compressed # possible values: nested expanded compact compressed
 
 stylesheet: main
+
+port: 1993
+
+permalink: /:categories/:title
+
+collections:
+  works:
+    output: true
+    permalink: /works/:path/
