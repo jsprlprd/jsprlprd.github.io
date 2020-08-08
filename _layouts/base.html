@@ -12,23 +12,32 @@
 
     <title>{{ site.title }}</title>
 
-    <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+    {% if site.custom-font %}
+      <!-- Custom Font -->
+      <link href="{{ site.custom-font }}" rel="stylesheet">
+    {% endif %}
 
-    <!-- FontAwesome 5 -->
-    <script src="https://kit.fontawesome.com/9eb6b1689c.js" crossorigin="anonymous"></script>
+    {% if site.fontawesome %}
+      <!-- FontAwesome 5 -->
+      <script src="{{ site.fontawesome }}" crossorigin="anonymous"></script>
+    {% endif %}
+
+    {% if site.material-icon %}
+      <!-- Google Material Icon -->
+      <script src="{{ site.material-icon }}" crossorigin="anonymous"></script>
+    {% endif %}
 
     <!-- STYLESHEET -->
 
-    <!-- Base -->
+    <!-- Main -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ site.stylesheet }}.css">
 
     <!-- Global -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/global.css">
 
-    <!-- Layout Specific CSS -->
     {% if layout.layout-styles %}
+      <!-- Layout Specific CSS -->
       <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ layout.layout-styles }}.css">
     {% endif %}
 
