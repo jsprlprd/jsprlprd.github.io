@@ -1,24 +1,20 @@
-html {
-  font-size: unset;
-}
+
 
 body {
   font-family: 'PT Serif', serif;
-  /* color: #3E515B; */
-  color: #263237;
 }
 
 b, strong {
   font-weight: 600;
 }
 
-small,
+/* small,
 .small {
   font-size: 14px;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  /* color: #daa520; */
+  color: #daa520;
   color: #263237;
 }
 
@@ -26,7 +22,7 @@ small,
   color: #899194;
 }
 
-
+ */
 
 
 
@@ -205,10 +201,10 @@ a.card:hover .card-img-overlay {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 245px);
+  height: calc(100vh - 152px);
   justify-content: center;
 }
-
+/* 
 @media (min-width: 992px) {
   .wrapper {
     height: calc(100vh - 309px);
@@ -221,7 +217,7 @@ a.card:hover .card-img-overlay {
   }
 }
 
-
+ */
 
 
 
@@ -426,4 +422,25 @@ footer nav ul li a {
       flex-wrap: wrap;
       flex: initial; 
   }
+}
+
+
+
+.grid {
+  display: grid;
+}
+
+#work-exprience {
+  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#whoiam {
+  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr;
+}
+
+#portfolio {
+  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr;
 }

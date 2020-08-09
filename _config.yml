@@ -1,6 +1,6 @@
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "Jasper Lepardo | Interface Designer & Experience Crafter" # the name of your site, e.g. ACME Corp.
+title: "Jasper John L. Lepardo | Designer" # the name of your site, e.g. ACME Corp.
 description: I'm an Interface Designer and Experience Crafter based in Philippines. Over the past four years, I've designed products and helped tailor experiences for some amazing brands.
 
 # Exclude from processing.
@@ -20,7 +20,7 @@ fontawesome: "https://kit.fontawesome.com/9eb6b1689c.js"
 # material-icon: "https://fonts.googleapis.com/icon?family=Material+Icons"
 
 sass:
-  style: compressed # possible values: nested expanded compact compressed
+  style: compressed
 
 stylesheet: main
 

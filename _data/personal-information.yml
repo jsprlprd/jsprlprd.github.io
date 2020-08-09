@@ -1,0 +1,59 @@
+name: Jasper John L. Lepardo
+title: Designer
+mobile-number: (0917) 116 1268
+email-address: jsprlprd@gmail.com
+home-address: Mendez-Nuñez, Cavite, PH
+website: www.jsprlprd.com
+skype: live:jsprlprd
+summary: With 6 years experience in the field of Web Design & Development, I hold a strong skill set in both creative and technical. I am highly interested into further exposure in the field of User Experience Design, that will help me create a more user-centered interfaces.
+skills:
+  - Brand and Identity
+  - Design System
+  - Front-End Design
+  - Graphic Design
+  - Interaction Design
+  - Mobile App Design
+  - Motion Graphics
+  - Prototyping
+  - Responsive Web Design
+  - UI/UX Design
+  - Visual Design
+  - Wireframing
+tools:
+  - design:
+    - Adobe After Effects
+    - Adobe XD
+    - Adobe Illustrator
+    - Adobe InDesign
+    - Adobe Photoshop
+    - Axure
+    - Figma
+    - Invision
+    - Sketch
+  - development:
+    - HTML 5
+    - CSS 3
+    - Github Pages
+    - JavaScript
+    - Jekyll
+    - jQuery
+    - Sass/Less
+social-media:
+  - name: Behance
+    icon: fab fa-behance-square
+    url: https://www.behance.net/jsprlprd/
+  - name: Dribble
+    icon: fab fa-dribbble-square
+    url: https://dribbble.com/jsprlprd/
+  - name: Facebook
+    icon: fab fa-facebook-square
+    url: https://www.facebook.com/jsprlprd/
+  - name: Github
+    icon: fab fa-github-square
+    url: https://github.com/jsprlprd/
+  - name: LinkedIn
+    icon: fab fa-linkedin
+    url: https://www.linkedin.com/in/jsprlprd/
+  - name: Twitter
+    icon: fab fa-vimeo-square
+    url: https://twitter.com/jsprlprd/

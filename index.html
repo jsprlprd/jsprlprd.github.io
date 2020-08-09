@@ -8,6 +8,7 @@ layout: default
     <h1 class="display-4">I <b>design</b> stuffs.</h1>
   </div>
 </div>
+
 <div class="wrapper">
   <div class="container">
     <div class="media pb-5">
@@ -19,23 +20,23 @@ layout: default
       </div>
     </div>
     
-    <div class="row pt-5">
-      <div class="col-lg-6 mb-5">
+    <div class="grid" id="whoiam">
+      <div>
         <img class="mb-3" src="/assets/img/design-tool.svg" alt="" width="48">
         <h6 class="card-title h3"><b>Designer</b></h6>
         <p class="card-text lead">I value simple content structure, clean design patterns, and thoughtful interactions.</p>
       </div>
-      <div class="col-lg-6 mb-5">
+      <div>
         <img class="mb-3" src="/assets/img/code.svg" alt="" width="48">
         <h6 class="card-title h3"><b>Coder</b></h6>
         <p class="card-text lead">I enjoy coding my own designs with modern HTML, CSS and basic JavaScript.</p>
       </div>
-      <div class="col-lg-6 mb-5">
+      <div>
         <img class="mb-3" src="/assets/img/solution.svg" alt="" width="48">
         <h6 class="card-title h3"><b>Thinker</b></h6>
         <p class="card-text lead">I love solving business problems with design solutions that delights the users.</p>
       </div>
-      <div class="col-lg-6 mb-5">
+      <div>
         <img class="mb-3" src="/assets/img/code.svg" alt="" width="48">
         <h6 class="card-title h3"><b>Speaker</b></h6>
         <p class="card-text lead">I inspire career shifters by sharing my work experience learnings.</p>
@@ -43,120 +44,28 @@ layout: default
     </div>
   </div>
 </div>
+
 <div class="wrapper">
   <div class="container">
     <h2 class="h3 mb-5">Over the past 6 years, I've designed products and helped tailor experiences for some amazing brands.</h2>
     <div class="grid" id="work-exprience">
-      <div>
-        <h3 class="h4 mb-0"><a href="">Samsung Research (SRPH)</a></h3>
-        <p class="lead mb-0">UI/UX Designer</p>
-        <p class="text-muted mb-0">March 2019 <em>to</em> Present</p>
-      </div>
-      <div>
-        <h3 class="h4 mb-0"><a href="">DXC Technology</a></h3>
-        <p class="lead mb-0">UI/UX Designer</p>
-        <p class="text-muted mb-0">November 2018 <em>to</em> March 2019</p>
-      </div>
-      <div>
-        <h3 class="h4 mb-0"><a href="">Employee Connect</a></h3>
-        <p class="lead mb-0">Senior UI/UX Designer</p>
-        <p class="text-muted mb-0">October 2017 <em>to</em> September 2018</p>
-      </div>
-      <div>
-        <h3 class="h4 mb-0"><a href="">Sprout Solutions</a></h3>
-        <p class="lead mb-0">UI Desinger &amp; Front End Developer</p>
-        <p class="text-muted mb-0">April 2017 <em>to</em> September 2017</p>
-      </div>
-      <div>
-        <h3 class="h4 mb-0"><a href="">Trend Micro</a></h3>
-        <p class="lead mb-0">User Interface Designer</p>
-        <p class="text-muted mb-0">May 2015 <em>to</em> March 2016</p>
-      </div>
-      <div>
-        <h3 class="h4 mb-0"><a href="">TaskUs</a></h3>
-        <p class="lead mb-0">Web Developer</p>
-        <p class="text-muted mb-0">August 2014 <em>to</em> May 2015</p>
-      </div>
-      <div>
-        <h3 class="h4 mb-0"><a href="">Sports Bookie Online</a></h3>
-        <p class="lead mb-0">Graphic Designer</p>
-        <p class="text-muted mb-0">April 2014 <em>to</em> August 2014</p>
-      </div>
+      {% for work in site.data.resume.employment-history %}
+        <div>
+          <h3 class="h4 mb-0"><a href="{{ work.website }}" target=”_blank”>{{ work.company }}</a></h3>
+          <p class="lead mb-0">{{ work.position }}</p>
+          <p class="text-muted mb-0">{{ work.start-date | date: "%b %Y" }} <i>to</i> {% if work.end-date %}{{ work.end-date | date: "%b %Y" }}{% else %}Present {% endif %}</p>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </div>
-
-
-
-<div class="container">
-
-
-
-
-
-  <!-- <div class="card-group">
-    <div class="card">
-      <div class="card-body">
-        <img class="mb-3" src="/assets/img/design-tool.svg" alt="" width="48">
-        <h6 class="card-title h3"><b>Designer</b></h6>
-        <p class="card-text">I value simple content structure, clean design patterns, and thoughtful interactions.</p>
-        <p><b>Things I design</b>:</p>
-        <p>UX, UI, Web, Mobile Apps, Logos</p>
-        <p><b>Design Tools</b>:</p>
-        <ul class="list-unstyled">
-          <li>Adobe XD</li>
-          <li>Illustrator</li>
-          <li>Photoshop</li>
-          <li>InVision Studio</li>
-          <li>Sketch</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <img class="mb-3" src="/assets/img/solution.svg" alt="" width="48">
-        <h6 class="card-title h3"><b>Thinker</b></h6>
-        <p class="card-text">I solve business problems with design solutions that delights the users.</p>
-        <p><b>Methods I use</b>:</p>
-        <p>Design Thinking, Usability Testing, User Research</p>
-        <p><b>Research Tools</b>:</p>
-        <ul class="list-unstyled">
-          <li>Axure</li>
-          <li>Card Sorting</li>
-          <li>InVision</li>
-          <li>Interviews</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <img class="mb-3" src="/assets/img/code.svg" alt="" width="48">
-        <h6 class="card-title h3"><b>Coder</b></h6>
-        <p class="card-text">I enjoy coding my own designs with HTML, CSS and basic Javascript.</p>
-        <p><b>Languages I speak</b>:</p>
-        <p>HTML 5, CSS 3, JavaScript, Sass</p>
-        <p><b>Dev Tools</b>:</p>
-        <ul class="list-unstyled">
-          <li>Bootstrap</li>
-          <li>Jekyll</li>
-          <li>Github Pages</li>
-          <li>VS Code</li>
-          <li>Terminal</li>
-        </ul>
-      </div>
-    </div>
-  </div> -->
-
-</div>
-
-
 
 <div class="jumbotron" id="portfolio-section">
   <div class="container">
     <div class="heading">
       <h1 class="heading-title h2"><b>Some of my work</b></h1>
     </div>
-    <div class="card-columns">
+    <div class="grid" id="portfolio">
       {% assign works = site.works | sort:"order" | reverse | where: "categories", "featured"%}
       {% for work in works %}
         {% if work.external-url %}
@@ -188,57 +97,19 @@ layout: default
         {% endif %}
       {% endfor %}
     </div>
-
-<!-- 
-    <div class="card-columns">
-      {% for portfolio in site.posts %}
-        <a class="card" id="{{ portfolio.name }}" href="{{ portfolio.url }}">
-          <img class="card-img" src="{{ site.baseurl }}/assets/img/{{ portfolio.image-url }}" alt="" />
-          <div class="card-img-overlay">
-            <h5 class="card-title">{{ portfolio.title }}<span>Branding &amp; Identity, Personal</span></h5>
-          </div>
-        </a>
-      {% endfor %}
-    </div> -->
-
-
-    <!-- <a class="btn btn-primary btn-pills btn-lg" href="">See all my projects</a> -->
   </div>
 </div>
 
 <div class="container">
   <div class="heading text-center">
-    <h1 class="heading-title h2"><b>Let's work together</b></h1>
+    <h1 class="heading-title h2"><b>Let's connect</b></h1>
     <p class="heading-subtitle lead">I'm interested in chatting about design, feel free to connect with me on any of the social platforms below.</p>
+    <ul class="list-inline">
+      {% for social-media in site.data.personal-information.social-media %}
+        <li class="list-inline-item">
+          <a href="{{ social-media.url }}"><i class="{{ social-media.icon }}"></i></a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
-
-
-<!-- <div style="margin-top: -5rem;"> -->
-  <!-- <div class="container"> -->
-    <!-- <div class="heading">
-      <h1 class="heading-title h2"><b>Designer, Thinker, &amp; Coder</b></h1>
-      <p class="heading-subtitle lead">I love to solve design problems and isn't afraid to code.</p>    
-    </div> -->
-
-  <!-- </div> -->
-
-    <!-- <div class="card-columns">
-      {% for portfolio in site.posts %}
-        <a class="card" id="{{ portfolio.name }}" href="{{ portfolio.url }}">
-          <img class="card-img" src="{{ site.baseurl }}/assets/img/{{ portfolio.image-url }}" alt="" />
-          <div class="card-img-overlay">
-            <h5 class="card-title">{{ portfolio.title }}<span>Branding &amp; Identity, Personal</span></h5>
-          </div>
-        </a>
-      {% endfor %}
-    </div> -->
-    <!-- <a class="btn btn-primary btn-lg" href="">See more on Dribble</a> -->
-<!-- </div> -->
-<!-- 
-<div class="jumbotron">
-  <div class="container">
-    <h1 class="h3">My Startup Projects</h1>
-    <p>I'm a bit of a digital product junky. Over the years, I've demoed and trialed hundreds of web and mobile apps in different industries and verticals. Eventually, I decided that it would be a fun challenge to try designing and building my own.</p>
-  </div>
-</div> -->
