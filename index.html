@@ -66,16 +66,21 @@ layout: default
       <h1 class="heading-title h2"><b>Some of my work</b></h1>
     </div>
     <div class="grid" id="portfolio">
-      {% assign works = site.works | sort:"order" | reverse | where: "categories", "featured"%}
+      {% assign works = site.works | where: "categories", "featured"%}
       {% for work in works %}
         {% if work.external-url %}
           <a class="card shadow-sm" id="{{ work.name }}" target="_blank" href="{{ work.external-url }}">
-            {% if work.img-url %}
-              <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/assets/img/{{ work.img-url }}" alt="" />
+            {% if work.thumbnail %}
+              <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/assets/img/{{ work.thumbnail }}" alt="" />
               {% else %}
               <img class="card-img-top" loading="lazy" src="https://dummyimage.com/1600x1200/fafafa/fafafa.png" alt="" />
             {% endif %}
             <div class="card-body">
+              <ul class="list-inline">
+                {% for tag in work.tags %}
+                  <li class="list-inline-item">{{ tag }}</li>
+                {% endfor %}
+              </ul>
               <span>{{ work.tags }}</span>
               <h6 class="card-title h4"><b>{{ work.title }}</b></h6>
               <p class="card-text lead">{{ work.description }}</p>
@@ -83,13 +88,17 @@ layout: default
           </a>
         {% else %}
           <a class="card shadow-sm" id="{{ work.name }}" href="{{ work.url }}">
-            {% if work.img-url %}
-              <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/assets/img/{{ work.img-url }}" alt="" />
+            {% if work.thumbnail %}
+              <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/assets/img/{{ work.thumbnail }}" alt="" />
               {% else %}
               <img class="card-img-top" loading="lazy" src="https://dummyimage.com/1600x1200/fafafa/fafafa.png" alt="" />
             {% endif %}
             <div class="card-body">
-              <span>{{ work.tags }}</span>
+              <ul class="list-inline">
+                {% for tag in work.tags %}
+                  <li class="list-inline-item">{{ tag }}</li>
+                {% endfor %}
+              </ul>
               <h6 class="card-title h4"><b>{{ work.title }}</b></h6>
               <p class="card-text lead">{{ work.description }}</p>
             </div>
@@ -103,13 +112,13 @@ layout: default
 <div class="container">
   <div class="heading text-center">
     <h1 class="heading-title h2"><b>Let's connect</b></h1>
-    <p class="heading-subtitle lead">I'm interested in chatting about design, feel free to connect with me on any of the social platforms below.</p>
-    <ul class="list-inline">
-      {% for social-media in site.data.personal-information.social-media %}
-        <li class="list-inline-item">
-          <a href="{{ social-media.url }}"><i class="{{ social-media.icon }}"></i></a>
-        </li>
-      {% endfor %}
-    </ul>
+    <p class="heading-subtitle lead">I'm interested in chatting about design,<br/>feel free to connect with me on any of the social platforms below.</p>
   </div>
+  <ul class="list-inline" id="social-media">
+    {% for social-media in site.data.personal-information.social-media %}
+      <li class="list-inline-item">
+        <a href="{{ social-media.url }}"><i class="{{ social-media.icon }}"></i></a>
+      </li>
+    {% endfor %}
+  </ul>
 </div>

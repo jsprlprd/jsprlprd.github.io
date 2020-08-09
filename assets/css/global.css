@@ -298,10 +298,6 @@ footer nav ul li a {
   }  
 }
 
-.heading h1,
-.heading .lead {
-  margin-bottom: 0;
-}
 
 
 
@@ -443,4 +439,18 @@ footer nav ul li a {
 #portfolio {
   grid-gap: 40px;
   grid-template-columns: 1fr 1fr;
+}
+
+#social-media {
+  text-align: center;
+}
+
+#social-media li a {
+  color: inherit;
+  font-size: 48px;
+}
+
+
+a {
+  color: inherit;
 }

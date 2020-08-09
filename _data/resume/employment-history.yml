@@ -75,9 +75,15 @@
     - Present and defend designs and key milestone deliverables to peers and executive level stakeholders
     - Conduct user research and evaluate user feedback
     - Establish and promote design guidelines, best practices and standards
-    # - As one of the leading anti-virus company, serving 30% of the enterprise market. Giving the best customer support is key to the company's success.
-    # - In almost 2years, I've been a key role in the redesigning of it's legacy Enterprise Support Portal into a more user-friendly and mobile responsive portal. It gives our customers an intuitive way of accessing Trend Micro's support services by enabling them to quickly file for a support ticket. We've also streamlined  other business processes by intgerating multiple systems into one and automating routine task. It enables a faster case resolutions and freed manhours ans refocused them to a more impactful task.
-    # - I also got the chance to device a way to limit the gap between the design team and the development team. By translating the company's desing guidelines into a web based living design system. It enables the team to have a common language when collaborating. To ensures that the design specifications is strictly followed, using the new living design system, it enables designers to design/prototype in the web, cutting the design handoffs time into half. 
+  summary:
+    - As one of the leading anti-virus company, serving 30% of the enterprise market worldwide, giving the best customer support is key to the their success.
+    - In my almost 2 years stint, I was a key person tasked in modernizing its legacy Enterprise Support Portal into a more user-friendly and mobile-responsive web application. Our goal is to give our customers an intuitive way of accessing Trend Micro's support services by enabling them to quickly file for a support ticket through the portal. We've streamlined other business processes by integrating them into the portal and automated other routinic task. This enables faster case resolutions which freed up valuable man-hours that can be refocused to a more impactful task.
+    - During it's development, I noticed a gap between the design team and the development team. To solve this, I've translated the company's design guidelines into a web-based living design system. This established a common language for both teams and enables the designers to design/prototype directly into the web. It also ensured that the design specifications will be strictly followed without the need to create a separate design documents, which ultimately cuts the designer-developer handoff time into half.
+  projects:
+    - name: Business Support Portal
+      url: https://success.trendmicro.com
+    - name: Trend Micro | Design System
+      url: 
 
 - position: Web Developer
   company: TaskUs
