@@ -5,6 +5,11 @@
   start-date: March 9, 2020
   end-date:
   descriptions:
+    - Perform development and implementation of research, analysis methodology and tools related to each project and proceed planning, implementation and analysis of the assigned project regarding its requirement, functions, market, trend, users and etc.
+    - Define and work on User Experience core principles and concepts for User Interface design using derived insights and analysis that provides meaningful values to target users and the company.
+    - Manage and oversee as to ensure that commercializable output information architecture, workflow, and layout are materialized within the given timeline and resources by carrying out detailed scenarios created on the UX core principles and concept.
+    - Perform self-validation such as rapid prototyping and external validation, and incorporate the validation outcome to the final output for improvement.
+
 
 - position: UI/UX Designer (Technology Consultant III)
   company: DXC Technology
@@ -75,15 +80,15 @@
     - Present and defend designs and key milestone deliverables to peers and executive level stakeholders
     - Conduct user research and evaluate user feedback
     - Establish and promote design guidelines, best practices and standards
-  summary:
-    - As one of the leading anti-virus company, serving 30% of the enterprise market worldwide, giving the best customer support is key to the their success.
-    - In my almost 2 years stint, I was a key person tasked in modernizing its legacy Enterprise Support Portal into a more user-friendly and mobile-responsive web application. Our goal is to give our customers an intuitive way of accessing Trend Micro's support services by enabling them to quickly file for a support ticket through the portal. We've streamlined other business processes by integrating them into the portal and automated other routinic task. This enables faster case resolutions which freed up valuable man-hours that can be refocused to a more impactful task.
-    - During it's development, I noticed a gap between the design team and the development team. To solve this, I've translated the company's design guidelines into a web-based living design system. This established a common language for both teams and enables the designers to design/prototype directly into the web. It also ensured that the design specifications will be strictly followed without the need to create a separate design documents, which ultimately cuts the designer-developer handoff time into half.
-  projects:
-    - name: Business Support Portal
-      url: https://success.trendmicro.com
-    - name: Trend Micro | Design System
-      url: 
+  # summary:
+  #   - As one of the leading anti-virus company, serving 30% of the enterprise market worldwide, giving the best customer support is key to the their success.
+  #   - In my almost 2 years stint, I was a key person tasked in modernizing its legacy Enterprise Support Portal into a more user-friendly and mobile-responsive web application. Our goal is to give our customers an intuitive way of accessing Trend Micro's support services by enabling them to quickly file for a support ticket through the portal. We've streamlined other business processes by integrating them into the portal and automated other routinic task. This enables faster case resolutions which freed up valuable man-hours that can be refocused to a more impactful task.
+  #   - During it's development, I noticed a gap between the design team and the development team. To solve this, I've translated the company's design guidelines into a web-based living design system. This established a common language for both teams and enables the designers to design/prototype directly into the web. It also ensured that the design specifications will be strictly followed without the need to create a separate design documents, which ultimately cuts the designer-developer handoff time into half.
+  # projects:
+  #   - name: Business Support Portal
+  #     url: https://success.trendmicro.com
+  #   - name: Trend Micro | Design System
+  #     url: 
 
 - position: Web Developer
   company: TaskUs

@@ -59,7 +59,7 @@ layout: default
         {% endfor %}
       </ul>
   
-      <!-- <h4><b>Trainings/Seminars</b></h4>
+      <h4><b>Trainings/Seminars</b></h4>
       <ul class="list-unstyled" id="reference-section">
         {% for workshop in site.data.resume.trainings-and-seminars %}
           <li>
@@ -68,9 +68,9 @@ layout: default
             {{ workshop.date }}
           </li>
         {% endfor %}
-      </ul> -->
+      </ul>
 
-      <!-- <h4><b>Awards &amp; Recognition</b></h4>
+      <h4><b>Awards &amp; Recognition</b></h4>
       <ul class="list-unstyled" id="reference-section">
         {% for award in site.data.resume.awards-and-recognition %}
           <li>
@@ -80,7 +80,7 @@ layout: default
             {{ award.date }}
           </li>
         {% endfor %}
-      </ul> -->
+      </ul>
     
       <!-- <h4><b>Reference</b></h4>
       <ul class="list-unstyled" id="reference-section">
@@ -115,16 +115,18 @@ layout: default
             <span class="lead"><b>{{ work.position }}</b></span><br/>
             <span class="text-muted">{{ work.company }} - {{ work.location }}</span>
           </p>
-          {% for summary in work.summary %}
-            <p>{{ summary }}</p>
-          {% endfor %}
-      <!-- {% if work.descriptions %}
+          {% if work.summary %}
+            {% for summary in work.summary %}
+              <p>{{ summary }}</p>
+            {% endfor %}
+            {% else %}
             <ul class="small">
               {% for desciption in work.descriptions %}
               <li>{{ desciption }}</li>
               {% endfor %}
             </ul>
-          {% endif %} -->
+          {% endif %}
+
           {% if work.projects %}
             <p><b>Key Projects/Achievements</b></p>
             <ul>
