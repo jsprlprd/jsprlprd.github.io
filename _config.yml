@@ -6,23 +6,25 @@ description: I'm an Interface Designer and Experience Crafter based in Philippin
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
 
-custom-font: "https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-
-fontawesome: "https://kit.fontawesome.com/9eb6b1689c.js"
+# fontawesome: "https://kit.fontawesome.com/9eb6b1689c.js"
 
 # material-icon: "https://fonts.googleapis.com/icon?family=Material+Icons"
 
+google-font: "https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+
 sass:
-  style: compressed
+  style: compressed # possible values: nested expanded compact compressed
+
+# external-stylesheet:
 
 stylesheet: main
 
