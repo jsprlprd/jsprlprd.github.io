@@ -14,6 +14,8 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
+# custom-font:
+
 # fontawesome: "https://kit.fontawesome.com/9eb6b1689c.js"
 
 # material-icon: "https://fonts.googleapis.com/icon?family=Material+Icons"
