@@ -8,5 +8,6 @@ tags:
     - UI/UX
     - Mobile
 categories: "featured"
-order: 6
+
+external-url: https://xd.adobe.com/view/740b9816-a93f-41bd-a55e-891843f10a7c-2158/
 ---

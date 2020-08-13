@@ -1,0 +1,124 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+  <div class="container">
+    <h1 class="display-4">Hi! I'm <b>Jasper</b>.</h1>
+    <h1 class="display-4">I <b>design</b> stuffs.</h1>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="media pb-5">
+      <div class="mr-5">
+        <img class="rounded-circle" src="{{ site.baseurl }}/assets/img/profile-picture-black.jpg" width="176" height="176" alt="">
+      </div>
+      <div class="media-content align-self-center">
+        <h2 class="h3">I'm a designer based in the Philippines. I love to solve design problems and isn't afraid to code.</h2>
+      </div>
+    </div>
+    
+    <div class="grid" id="whoiam">
+      <div>
+        <img class="mb-3" src="/assets/img/design-tool.svg" alt="" width="48">
+        <h6 class="card-title h3"><b>Designer</b></h6>
+        <p class="card-text lead">I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+      </div>
+      <div>
+        <img class="mb-3" src="/assets/img/code.svg" alt="" width="48">
+        <h6 class="card-title h3"><b>Coder</b></h6>
+        <p class="card-text lead">I enjoy coding my own designs with modern HTML, CSS and basic JavaScript.</p>
+      </div>
+      <div>
+        <img class="mb-3" src="/assets/img/solution.svg" alt="" width="48">
+        <h6 class="card-title h3"><b>Thinker</b></h6>
+        <p class="card-text lead">I love solving business problems with design solutions that delights the users.</p>
+      </div>
+      <div>
+        <img class="mb-3" src="/assets/img/code.svg" alt="" width="48">
+        <h6 class="card-title h3"><b>Speaker</b></h6>
+        <p class="card-text lead">I inspire career shifters by sharing my work experience learnings.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="container">
+    <h2 class="h3 mb-5">Over the past 6 years, I've designed products and helped tailor experiences for some amazing brands.</h2>
+    <div class="grid" id="work-exprience">
+      {% for work in site.data.resume.employment-history %}
+        <div>
+          <h3 class="h4 mb-0"><a href="{{ work.website }}" target=”_blank”>{{ work.company }}</a></h3>
+          <p class="lead mb-0">{{ work.position }}</p>
+          <p class="text-muted mb-0">{{ work.start-date | date: "%b %Y" }} <i>to</i> {% if work.end-date %}{{ work.end-date | date: "%b %Y" }}{% else %}Present {% endif %}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron" id="portfolio-section">
+  <div class="container">
+    <div class="heading">
+      <h1 class="heading-title h2"><b>Some of my work</b></h1>
+    </div>
+    <div class="grid" id="portfolio">
+      {% assign works = site.works | where: "categories", "featured"%}
+      {% for work in works %}
+        {% if work.external-url %}
+          <a class="card shadow-sm" id="{{ work.name }}" target="_blank" href="{{ work.external-url }}">
+            {% if work.thumbnail %}
+              <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/assets/img/{{ work.thumbnail }}" alt="" />
+              {% else %}
+              <img class="card-img-top" loading="lazy" src="https://dummyimage.com/1600x1200/fafafa/fafafa.png" alt="" />
+            {% endif %}
+            <div class="card-body">
+              <ul class="list-inline">
+                {% for tag in work.tags %}
+                  <li class="list-inline-item">{{ tag }}</li>
+                {% endfor %}
+              </ul>
+              <span>{{ work.tags }}</span>
+              <h6 class="card-title h4"><b>{{ work.title }}</b></h6>
+              <p class="card-text lead">{{ work.description }}</p>
+            </div>
+          </a>
+        {% else %}
+          <a class="card shadow-sm" id="{{ work.name }}" href="{{ work.url }}">
+            {% if work.thumbnail %}
+              <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/assets/img/{{ work.thumbnail }}" alt="" />
+              {% else %}
+              <img class="card-img-top" loading="lazy" src="https://dummyimage.com/1600x1200/fafafa/fafafa.png" alt="" />
+            {% endif %}
+            <div class="card-body">
+              <ul class="list-inline">
+                {% for tag in work.tags %}
+                  <li class="list-inline-item">{{ tag }}</li>
+                {% endfor %}
+              </ul>
+              <h6 class="card-title h4"><b>{{ work.title }}</b></h6>
+              <p class="card-text lead">{{ work.description }}</p>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="heading text-center">
+    <h1 class="heading-title h2"><b>Let's connect</b></h1>
+    <p class="heading-subtitle lead">I'm interested in chatting about design,<br/>feel free to connect with me on any of the social platforms below.</p>
+  </div>
+  <ul class="list-inline" id="social-media">
+    {% for social-media in site.data.personal-information.social-media %}
+      <li class="list-inline-item">
+        <a href="{{ social-media.url }}"><i class="{{ social-media.icon }}"></i></a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
