@@ -1,3 +1,7 @@
-- text: 
-  icon: 
-  url: 
+- class: 
+  type: 
+  menu:
+  - text: 
+    icon: 
+    url: 
+    status: 
