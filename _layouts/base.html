@@ -56,10 +56,14 @@
 
     {% if site.swup-animation %}
       <main class="transition-{{ page.transition }}" id="swup">
-        {{ content }}
+        <div class="container">
+          {{ content }}
+        </div>
       </main>
       {% else %}
-      {{ content }}
+      <div class="container">
+        {{ content }}
+      </div>
     {% endif %}
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -70,10 +74,8 @@
     <!-- PLUGINS -->
 
     {% if site.swup-animation %}
-      <script defer src="{{ swup-animation }}"></script>
-      <script>
-        const swup = new Swup(); // only this line when included with script tag
-      </script>
+      <script defer src="{{ site.swup-animation }}"></script>
+      <script defer src="{{ site.baseurl }}/assets/plugins/swup/js/swup.js"></script>
     {% endif %}
 
   </body>
