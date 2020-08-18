@@ -29,13 +29,8 @@
 
     <!-- STYLESHEET -->
 
-    {% if site.external-stylesheet %}
-      <!-- External Stylesheet -->
-      <link rel="stylesheet" href="{{external-stylesheet}}">
-      {% else %}
-      <!-- Main -->
-      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ site.stylesheet }}.css">
-    {% endif %}
+    <!-- Main -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ site.stylesheet | default: "main" }}.css">
 
     <!-- Global -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/global.css">

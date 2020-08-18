@@ -27,6 +27,4 @@ title: "" # the name of your site, e.g. ACME Corp.
 sass:
   style: compressed # possible values: nested expanded compact compressed
 
-# external-stylesheet:
-
-stylesheet: main
+stylesheet: # place external url here
