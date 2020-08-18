@@ -4,14 +4,6 @@ layout-type: #container | container-fluid
 custom-stylesheet: 
 ---
 
-{% if site.swup-animation %}
-  <div class="transition-{% if page.transition %}{{page.transition}}{% else %}{{ layout.transition }}{%endif%}" id="swup">
-    <main class="{% if page.layout-type %}{{page.layout-type}}{% else %}{{ layout.layout-type | default: "container"}}{%endif%}">
-      {{ content }}
-    </main>
-  </div>
-  {% else %}
-  <main class="{% if page.layout-type %}{{page.layout-type}}{% else %}{{ layout.layout-type | default: "container"}}{%endif%}">
-    {{ content }}
-  </main>
-{% endif %}
+<main class="{% if page.layout-type %}{{page.layout-type}}{% else %}{{ layout.layout-type | default: "container"}}{%endif%}">
+  {{ content }}
+</main>
