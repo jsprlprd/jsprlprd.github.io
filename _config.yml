@@ -20,6 +20,8 @@ title: "" # the name of your site, e.g. ACME Corp.
 
 # google-font: 
 
+# isPWA: true
+
 # swup-animation: "https://unpkg.com/swup@latest/dist/swup.min.js"
 
 sass:

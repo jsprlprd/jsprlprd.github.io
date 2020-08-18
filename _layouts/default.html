@@ -2,4 +2,14 @@
 layout: base
 ---
 
-{{ content }}
+{% if site.swup-animation %}
+  <div class="transition-{{ page.transition }}" id="swup">
+    <main class="{{ layout.container-type | default: "container"}}{{ page.container-type | default: "container" }}">
+      {{ content }}
+    </main>
+  </div>
+  {% else %}
+  <main class="{{ layout.container-type | default: "container"}}{{ page.container-type | default: "container" }}">
+    {{ content }}
+  </main>
+{% endif %}
