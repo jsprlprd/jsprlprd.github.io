@@ -35,9 +35,14 @@
     <!-- Global -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/global.css">
 
-    {% if layout.layout-styles %}
+    {% if layout.custom-stylesheet %}
       <!-- Layout Specific CSS -->
-      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ layout.layout-styles }}.css">
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ layout.custom-stylesheet }}.css">
+    {% endif %}
+
+    {% if page.custom-stylesheet %}
+      <!-- Page Specific CSS -->
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ page.custom-stylesheet }}.css">
     {% endif %}
 
     <!-- PLUGINS -->
