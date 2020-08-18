@@ -4,15 +4,12 @@ layout-type: #container | container-fluid
 ---
 
 {% if site.swup-animation %}
-  <div class="transition-{% if page.transition %}{{page.transition}}{% else %}{{ layout.transition }}{%endif%}{{ page.transition }}" id="swup">
+  <div class="transition-{% if page.transition %}{{page.transition}}{% else %}{{ layout.transition }}{%endif%}" id="swup">
     <main class="{% if page.layout-type %}{{page.layout-type}}{% else %}{{ layout.layout-type | default: "container"}}{%endif%}">
       {{ content }}
     </main>
   </div>
-  {% else %}      <main class="{% if page.layout-type %}{{page.layout-type}}{% else %}{{ layout.layout-type | default: "container"}}{%endif%}">
-        {{ content }}
-      </main>
-
+  {% else %}
   <main class="{% if page.layout-type %}{{page.layout-type}}{% else %}{{ layout.layout-type | default: "container"}}{%endif%}">
     {{ content }}
   </main>
