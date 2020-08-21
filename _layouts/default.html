@@ -1,5 +1,7 @@
 ---
 layout: base
+layout-type: #container | container-fluid
+custom-stylesheet: 
 ---
 
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -21,7 +23,9 @@ layout: base
   </div>
 </nav>
 
-{{ content }}
+<main class="{% if page.layout-type %}{{page.layout-type}}{% else %}{{ layout.layout-type | default: "container"}}{%endif%}">
+  {{ content }}
+</main>
 
 <footer class="d-print-none">
   <div class="container">
