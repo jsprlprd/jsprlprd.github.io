@@ -1,181 +1,182 @@
 ---
 layout: default
+layout-type: container
+custom-stylesheet: 
+transition: 
 ---
 
-<div class="container">
-  <div class="heading">
-    <div class="row">
-      <div class="col-md-4 text-center text-md-left">
-        <img class="profile-picture rounded" src="{{ site.baseurl }}/assets/img/profile-picture.jpg" alt="" />
-      </div>
-      <div class="col-md-8 align-self-center text-center text-md-left">
-        <h1><b>{{ site.data.personal-information.name }}</b></h1>
-        <p class="lead text-muted">{{ site.data.personal-information.title }}</p>
-        <ul class="list-unstyled list-columns two-columns" id="details-section">
-          <li>
-            <a href="tel:{{ site.data.personal-information.mobile-number }}"><i class="fas fa-mobile-alt"></i>{{ site.data.personal-information.mobile-number }}</a>
-          </li>
-          <li>
-            <a href="mailto:{{ site.data.personal-information.email-address }}"><i class="far fa-envelope"></i>{{ site.data.personal-information.email-address }}</a>
-          </li>
-          <li><i class="far fa-compass"></i>{{ site.data.personal-information.home-address }}</li>
-          <li><i class="fas fa-link"></i><a href="{{ site.data.personal-information.website }}">{{ site.data.personal-information.website }}</a></li>
-        </ul>
-        <button class="btn btn-primary d-print-none mt-5" type="button" onclick="window.print();return false">Download my Resume</button>
-      </div>
+<div class="heading">
+  <div class="row">
+    <div class="col-md-4 text-center text-md-left">
+      <img class="profile-picture rounded" src="{{ site.baseurl }}/assets/img/profile-picture.jpg" alt="" />
+    </div>
+    <div class="col-md-8 align-self-center text-center text-md-left">
+      <h1><b>{{ site.data.personal-information.name }}</b></h1>
+      <p class="lead text-muted">{{ site.data.personal-information.title }}</p>
+      <ul class="list-unstyled list-columns two-columns" id="details-section">
+        <li>
+          <a href="tel:{{ site.data.personal-information.mobile-number }}"><i class="fas fa-mobile-alt"></i>{{ site.data.personal-information.mobile-number }}</a>
+        </li>
+        <li>
+          <a href="mailto:{{ site.data.personal-information.email-address }}"><i class="far fa-envelope"></i>{{ site.data.personal-information.email-address }}</a>
+        </li>
+        <li><i class="far fa-compass"></i>{{ site.data.personal-information.home-address }}</li>
+        <li><i class="fas fa-link"></i><a href="{{ site.data.personal-information.website }}">{{ site.data.personal-information.website }}</a></li>
+      </ul>
+      <button class="btn btn-primary d-print-none mt-5" type="button" onclick="window.print();return false">Download my Resume</button>
     </div>
   </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-md-4">
+
+    <h4><b>About</b></h4>
+    <p>{{ site.data.personal-information.summary }}</p>
+
+    <h4><b>Skills</b></h4>
+    <ul class="list-inline">
+      {% for skills in site.data.personal-information.skills %}
+        <li class="list-inline-item">{{ skills }}</li>
+      {% endfor %}
+    </ul>
+
+    <h4><b>Tools</b></h4>
+
+    <p><b>Design</b></p>
+    <ul class="list-inline">
+      {% for tools in site.data.personal-information.tools %}
+        {% for design-tools in tools.design %}
+          <li class="list-inline-item">{{ design-tools }}</li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+
+    <p><b>Programming</b></p>
+    <ul class="list-inline">
+      {% for tools in site.data.personal-information.tools %}
+        {% for development-tools in tools.development %}
+          <li class="list-inline-item">{{ development-tools }}</li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+
+    <h4><b>Trainings/Seminars</b></h4>
+    <ul class="list-unstyled" id="reference-section">
+      {% for workshop in site.data.resume.trainings-and-seminars %}
+        <li>
+          <b>{{ workshop.title }}</b>, {{ workshop.organizer }}<br/>
+          {{ workshop.location }}<br/>
+          {{ workshop.date }}
+        </li>
+      {% endfor %}
+    </ul>
+
+    <h4><b>Awards &amp; Recognition</b></h4>
+    <ul class="list-unstyled" id="reference-section">
+      {% for award in site.data.resume.awards-and-recognition %}
+        <li>
+          <b>{{ award.name }}</b><br/>
+          {{ award.description }}<br/>
+          {{ award.institution }}<br/>
+          {{ award.date }}
+        </li>
+      {% endfor %}
+    </ul>
   
-  <div class="row">
-    <div class="col-12 col-md-4">
+    <!-- <h4><b>Reference</b></h4>
+    <ul class="list-unstyled" id="reference-section">
+      {% for reference in site.data.resume.references %}
+        <li>
+          <b>{{ reference.name }}</b>, {{ reference.position }}<br>
+          {{ reference.company }}<br>
+          {{ reference.department }}<br>
+          {% if reference.mobile %}
+            <a href="tel:{{ reference.mobile }}">{{ reference.mobile }}</a><br>
+          {% endif %}
+          {% if reference.email %}
+            <a href="mailto:{{ reference.email }}">{{ reference.email }}</a>
+          {% endif %}
+          {% if reference.linkedin %}
+            <a href="{{ reference.linkedin }}">View on LinkedIn</a><br>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul> -->
 
-      <h4><b>About</b></h4>
-      <p>{{ site.data.personal-information.summary }}</p>
+  </div>
 
-      <h4><b>Skills</b></h4>
-      <ul class="list-inline">
-        {% for skills in site.data.personal-information.skills %}
-          <li class="list-inline-item">{{ skills }}</li>
-        {% endfor %}
-      </ul>
+  <div class="col-12 col-md-8">
 
-      <h4><b>Tools</b></h4>
-
-      <p><b>Design</b></p>
-      <ul class="list-inline">
-        {% for tools in site.data.personal-information.tools %}
-          {% for design-tools in tools.design %}
-            <li class="list-inline-item">{{ design-tools }}</li>
+    <h3><b>Work Experiences</b></h3>
+    {% for work in site.data.resume.employment-history %}
+    <div class="row">
+      <div class="col-lg-3">{{ work.start-date | date: "%b '%y" }} <i>to</i> {% if work.end-date %}{{ work.end-date | date: "%b '%y" }}{% else %}Present {% endif %}</div>
+      <div class="col-lg-9">
+        <p>
+          <span class="lead"><b>{{ work.position }}</b></span><br/>
+          <span class="text-muted">{{ work.company }} - {{ work.location }}</span>
+        </p>
+        {% if work.summary %}
+          {% for summary in work.summary %}
+            <p>{{ summary }}</p>
           {% endfor %}
-        {% endfor %}
-      </ul>
-
-      <p><b>Programming</b></p>
-      <ul class="list-inline">
-        {% for tools in site.data.personal-information.tools %}
-          {% for development-tools in tools.development %}
-            <li class="list-inline-item">{{ development-tools }}</li>
-          {% endfor %}
-        {% endfor %}
-      </ul>
-  
-      <h4><b>Trainings/Seminars</b></h4>
-      <ul class="list-unstyled" id="reference-section">
-        {% for workshop in site.data.resume.trainings-and-seminars %}
-          <li>
-            <b>{{ workshop.title }}</b>, {{ workshop.organizer }}<br/>
-            {{ workshop.location }}<br/>
-            {{ workshop.date }}
-          </li>
-        {% endfor %}
-      </ul>
-
-      <h4><b>Awards &amp; Recognition</b></h4>
-      <ul class="list-unstyled" id="reference-section">
-        {% for award in site.data.resume.awards-and-recognition %}
-          <li>
-            <b>{{ award.name }}</b><br/>
-            {{ award.description }}<br/>
-            {{ award.institution }}<br/>
-            {{ award.date }}
-          </li>
-        {% endfor %}
-      </ul>
-    
-      <!-- <h4><b>Reference</b></h4>
-      <ul class="list-unstyled" id="reference-section">
-        {% for reference in site.data.resume.references %}
-          <li>
-            <b>{{ reference.name }}</b>, {{ reference.position }}<br>
-            {{ reference.company }}<br>
-            {{ reference.department }}<br>
-            {% if reference.mobile %}
-              <a href="tel:{{ reference.mobile }}">{{ reference.mobile }}</a><br>
-            {% endif %}
-            {% if reference.email %}
-              <a href="mailto:{{ reference.email }}">{{ reference.email }}</a>
-            {% endif %}
-            {% if reference.linkedin %}
-              <a href="{{ reference.linkedin }}">View on LinkedIn</a><br>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul> -->
-
-    </div>
-
-    <div class="col-12 col-md-8">
-
-      <h3><b>Work Experiences</b></h3>
-      {% for work in site.data.resume.employment-history %}
-      <div class="row">
-        <div class="col-lg-3">{{ work.start-date | date: "%b '%y" }} <i>to</i> {% if work.end-date %}{{ work.end-date | date: "%b '%y" }}{% else %}Present {% endif %}</div>
-        <div class="col-lg-9">
-          <p>
-            <span class="lead"><b>{{ work.position }}</b></span><br/>
-            <span class="text-muted">{{ work.company }} - {{ work.location }}</span>
-          </p>
-          {% if work.summary %}
-            {% for summary in work.summary %}
-              <p>{{ summary }}</p>
+          {% else %}
+          <ul class="small">
+            {% for desciption in work.descriptions %}
+            <li>{{ desciption }}</li>
             {% endfor %}
-            {% else %}
-            <ul class="small">
-              {% for desciption in work.descriptions %}
-              <li>{{ desciption }}</li>
-              {% endfor %}
-            </ul>
-          {% endif %}
+          </ul>
+        {% endif %}
 
-          {% if work.projects %}
-            <p><b>Key Projects/Achievements</b></p>
-            <ul>
-              {% for project in work.projects %}
-              <li><a target="_blank" href="{{ project.url }}">{{ project.name }}</a></li>
-              {% endfor %}
-            </ul>
-          {% endif %}
+        {% if work.projects %}
+          <p><b>Key Projects/Achievements</b></p>
+          <ul>
+            {% for project in work.projects %}
+            <li><a target="_blank" href="{{ project.url }}">{{ project.name }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <h3><b>Education</b></h3>
+    {% for education in site.data.resume.educations %}
+      <div class="row">
+        <div class="col-md-3">
+          {{ education.level }}<br/>
+          {{ education.start-date }} - {{ education.end-date }}
+        </div>
+        <div class="col-md-9">
+          <p>
+            <span class="lead"><b>{{ education.degree }}</b></span> <br/>
+            {{ education.institution }}<br/>
+            <i>{{ education.location }}</i>
+          </p>
         </div>
       </div>
       {% endfor %}
-
-      <h3><b>Education</b></h3>
-      {% for education in site.data.resume.educations %}
-        <div class="row">
-          <div class="col-md-3">
-            {{ education.level }}<br/>
-            {{ education.start-date }} - {{ education.end-date }}
-          </div>
-          <div class="col-md-9">
-            <p>
-              <span class="lead"><b>{{ education.degree }}</b></span> <br/>
-              {{ education.institution }}<br/>
-              <i>{{ education.location }}</i>
-            </p>
-          </div>
-        </div>
-        {% endfor %}
-    </div>
   </div>
-  
-  <!-- <div class="row d-none d-print-block mt-5 pt-5">
-    <div class="col-md-8 offset-md-4">
-      <p>I hereby certify that all information stated herewith are true and correct to the best of my knowledge and beliefs.</p>
-      <div class="row mt-5">
-        <div class="col-md-6 offset-md-6">
-          <p>
-            <b>{{ site.data.personal-information.name | upcase }}</b><br/>
-            <span>{{ site.data.personal-information.title }}</span><br/>
-          </p>
-          <p>
-            <b>M</b>: {{ site.data.personal-information.mobile-number }}<br/>
-            <b>E</b>: {{ site.data.personal-information.email-address }}<br/>
-            <b>S</b>: {{ site.data.personal-information.skype }}
-          </p>
-          <a href="{{ site.data.personal-information.website }}">{{ site.data.personal-information.website }}</a>
-        </div>
+</div>
+
+<div class="row d-none d-print-block mt-5 pt-5">
+  <div class="col-md-8 offset-md-4">
+    <p>I hereby certify that all information stated herewith are true and correct to the best of my knowledge and beliefs.</p>
+    <div class="row mt-5">
+      <div class="col-md-6 offset-md-6">
+        <p>
+          <b>{{ site.data.personal-information.name | upcase }}</b><br/>
+          <span>{{ site.data.personal-information.title }}</span><br/>
+        </p>
+        <p>
+          <b>M</b>: {{ site.data.personal-information.mobile-number }}<br/>
+          <b>E</b>: {{ site.data.personal-information.email-address }}<br/>
+          <b>S</b>: {{ site.data.personal-information.skype }}
+        </p>
+        <a href="{{ site.data.personal-information.website }}">{{ site.data.personal-information.website }}</a>
       </div>
     </div>
-  </div> -->
-  
+  </div>
 </div>
+
