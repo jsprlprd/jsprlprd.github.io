@@ -64,7 +64,20 @@
       {{ content }}
     {% endif %}
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="{{ site.baseurl }}/assets/js/functions.js"></script>
 
+    <!-- PLUGINS -->
+
+    {% if site.swup-animation %}
+      <script defer src="{{ site.swup-animation }}"></script>
+      <script defer src="{{ site.baseurl }}/assets/plugins/swup/js/swup.js"></script>
+    {% endif %}
+
+    <!-- Updates Automatically the year in the footer -->
+    <script>document.getElementById('current-year').appendChild(document.createTextNode(new Date().getFullYear()))</script>
 
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
@@ -91,21 +104,16 @@
       theme_color="#262626">
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="{{ site.baseurl }}/assets/js/functions.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151009121-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    <!-- PLUGINS -->
+      gtag('config', 'UA-151009121-2');
+    </script>
 
-    {% if site.swup-animation %}
-      <script defer src="{{ site.swup-animation }}"></script>
-      <script defer src="{{ site.baseurl }}/assets/plugins/swup/js/swup.js"></script>
-    {% endif %}
-
-    <!-- Updates Automatically the year in the footer -->
-    <script>document.getElementById('current-year').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-
-  </body>
+</body>
 
 </html>
