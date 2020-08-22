@@ -2,6 +2,16 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "" # the name of your site, e.g. ACME Corp.
 
+# Open Graph Specific Tags
+open-graph:
+  type: ""
+  image: ""
+
+twitter:
+  type: "" #The card type, which will be one of “summary”, “summary_large_image”, “app”, or “player”.
+  id: "2582378478"
+
+  
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
