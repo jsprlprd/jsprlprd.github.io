@@ -11,17 +11,18 @@ custom-stylesheet:
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+      <!-- <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" href="tel:{{ site.data.personal-information.mobile-number }}"><i class="fas fa-mobile-alt"></i>{{ site.data.personal-information.mobile-number }}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="mailto:{{ site.data.personal-information.email-address }}"><i class="far fa-envelope"></i>{{ site.data.personal-information.email-address }}</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jsprlprd'});return false;">Schedule time with me</a>
-        </li>
-      </ul>
+      </ul> -->
+      <form class="form-inline ml-auto">
+        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+        <a class="btn btn-primary btn-lg" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jsprlprd'});return false;">Let's connect</a>
+      </form>
     </div>
   </div>
 </nav>
