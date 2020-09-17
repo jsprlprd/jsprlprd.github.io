@@ -16,7 +16,7 @@ transition:
 
     <div class="wrapper">
 
-      <div class="media pb-5">
+      <div class="media d-block d-md-flex pb-5">
         <div class="mr-5">
           <img class="rounded-circle" src="{{ site.baseurl }}/assets/img/profile-picture-black.jpg" width="176" height="176" alt="">
         </div>
@@ -64,30 +64,32 @@ transition:
   </div>
 
   <div class="jumbotron w-100" id="portfolio-section">
-    <div class="container">
-      <div class="heading">
-        <h1 class="heading-title h2"><b>Some of my work</b></h1>
-      </div>
-      <div class="grid" id="portfolio">
-        {% assign works = site.works | where: "categories", "featured"%}
-        {% for work in works %}
-          <a class="card shadow-sm" id="{{ work.name }}" target="_blank" href="{{ work.external-url | default: work.url }}">
-            {% if work.thumbnail %}
-              <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/assets/img/{{ work.thumbnail }}" alt="" />
-              {% else %}
-              <img class="card-img-top" loading="lazy" src="https://dummyimage.com/1600x1200/fafafa/fafafa.png" alt="" />
-            {% endif %}
-            <div class="card-body">
-              <ul class="list-inline">
-                {% for tag in work.tags %}
-                  <li class="list-inline-item">{{ tag }}</li>
-                {% endfor %}
-              </ul>
-              <h6 class="card-title h4"><b>{{ work.title }}</b></h6>
-              <p class="card-text lead">{{ work.description }}</p>
-            </div>
-          </a>
-        {% endfor %}
+    <div class="row">
+      <div class="container">
+        <div class="heading">
+          <h1 class="heading-title h2"><b>Some of my work</b></h1>
+        </div>
+        <div class="grid" id="portfolio">
+          {% assign works = site.works | where: "categories", "featured"%}
+          {% for work in works %}
+            <a class="card shadow-sm" id="{{ work.name }}" target="_blank" href="{{ work.external-url | default: work.url }}">
+              {% if work.thumbnail %}
+                <img class="card-img-top" loading="lazy" src="{{ site.baseurl }}/assets/img/{{ work.thumbnail }}" alt="" />
+                {% else %}
+                <img class="card-img-top" loading="lazy" src="https://dummyimage.com/1600x1200/fafafa/fafafa.png" alt="" />
+              {% endif %}
+              <div class="card-body">
+                <ul class="list-inline">
+                  {% for tag in work.tags %}
+                    <li class="list-inline-item">{{ tag }}</li>
+                  {% endfor %}
+                </ul>
+                <h6 class="card-title h4"><b>{{ work.title }}</b></h6>
+                <p class="card-text lead">{{ work.description }}</p>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>

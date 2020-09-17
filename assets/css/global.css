@@ -2,6 +2,7 @@
 
 body {
   font-family: 'PT Serif', serif;
+  padding-top: 73px;
 }
 
 b, strong {
@@ -31,7 +32,7 @@ b, strong {
 
 
 .navbar {
-  padding-top: 40px;
+  padding-top: 16px;
   padding-bottom: 16px;
   text-align: center;
   border-bottom: 1px solid #ddd;
@@ -201,23 +202,23 @@ a.card:hover .card-img-overlay {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 152px);
+  min-height: calc(100vh - 97px);
   justify-content: center;
 }
-/* 
+
 @media (min-width: 992px) {
   .wrapper {
-    height: calc(100vh - 309px);
+    min-height: calc(100vh - 152px);
   }
 }
 
 @media (min-width: 1200px) {
   .wrapper {
-    height: calc(100vh - 425px);
+    min-height: calc(100vh - 425px);
   }
 }
 
- */
+
 
 
 
@@ -428,17 +429,32 @@ footer nav ul li a {
 
 #work-exprience {
   grid-gap: 40px;
-  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (min-width: 992px) {
+  #work-exprience {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 #whoiam {
   grid-gap: 40px;
-  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 992px) {
+  #whoiam {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 #portfolio {
   grid-gap: 40px;
-  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 992px) {
+  #portfolio {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 #social-media {
