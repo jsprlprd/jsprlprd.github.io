@@ -1,12 +1,39 @@
+  
+@font-face {
+  font-family: "GT-Walsheim-Pro";
+  src: url("../fonts/GT_Walsheim_Pro/GT-Walsheim-Pro-Light.eot"),
+       url("../fonts/GT_Walsheim_Pro/GT-Walsheim-Pro-Light.woff") format("woff"),
+       url("../fonts/GT_Walsheim_Pro/GT-Walsheim-Pro-Light.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT-Walsheim-Pro";
+  src: url("../fonts/GT_Walsheim_Pro/GT-Walsheim-Pro-Regular.eot"),
+       url("../fonts/GT_Walsheim_Pro/GT-Walsheim-Pro-Regular.woff") format("woff"),
+       url("../fonts/GT_Walsheim_Pro/GT-Walsheim-Pro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT-Walsheim-Pro";
+  src: url("../fonts/GT_Walsheim_Pro/GT-Walsheim-Pro-Bold.eot"),
+       url("../fonts/GT_Walsheim_Pro/GT-Walsheim-Pro-Bold.woff") format("woff"),
+       url("../fonts/GT_Walsheim_Pro/GT-Walsheim-Pro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 
 
 body {
-  font-family: 'PT Serif', serif;
-  padding-top: 73px;
+  font-family: "GT-Walsheim-Pro", Arial, Helvetica, sans-serif;
+  padding-top: 56px;
 }
 
 b, strong {
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /* small,
@@ -31,7 +58,7 @@ b, strong {
 
 
 
-.navbar {
+/* .navbar {
   padding-top: 16px;
   padding-bottom: 16px;
   text-align: center;
@@ -52,7 +79,7 @@ b, strong {
     padding-top: 80px;
     padding-bottom: 32px;
   }  
-}
+} */
 
 .card {
   transition: all 200ms;
@@ -200,24 +227,9 @@ a.card:hover .card-img-overlay {
 
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 97px);
-  justify-content: center;
+  padding-top: clamp(40px, 8%, 80px);
+  padding-bottom: clamp(40px, 8%, 80px);
 }
-
-@media (min-width: 992px) {
-  .wrapper {
-    min-height: calc(100vh - 152px);
-  }
-}
-
-@media (min-width: 1200px) {
-  .wrapper {
-    min-height: calc(100vh - 425px);
-  }
-}
-
 
 
 
@@ -281,21 +293,21 @@ footer nav ul li a {
 
 
 .heading {
-  padding-top: 16px;
-  padding-bottom: 56px;
+  padding-top: 40px;
+  padding-bottom: 24px;
 }
 
 @media (min-width: 992px) {
   .heading {
-    padding-top: 24px;
-    padding-bottom: 84px;
+    /* padding-top: 24px; */
+    /* padding-bottom: 84px; */
   }  
 }
 
 @media (min-width: 1200px) {
   .heading {
-    padding-top: 32px;
-    padding-bottom: 112px;
+    /* padding-top: 32px; */
+    /* padding-bottom: 112px; */
   }  
 }
 
@@ -425,10 +437,11 @@ footer nav ul li a {
 
 .grid {
   display: grid;
+  grid-gap: 40px;
 }
 
 #work-exprience {
-  grid-gap: 40px;
+  /* grid-gap: clamp(16px, 8%, 40px); */
 }
 
 @media (min-width: 992px) {
@@ -438,17 +451,17 @@ footer nav ul li a {
 }
 
 #whoiam {
-  grid-gap: 40px;
+  /* grid-gap: 40px; */
 }
 
 @media (min-width: 992px) {
   #whoiam {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 #portfolio {
-  grid-gap: 40px;
+  /* grid-gap: 40px; */
 }
 
 @media (min-width: 992px) {
@@ -458,15 +471,16 @@ footer nav ul li a {
 }
 
 #social-media {
-  text-align: center;
+  /* text-align: center; */
 }
 
 #social-media li a {
   color: inherit;
-  font-size: 48px;
+  font-size: 32px;
 }
 
 
-a {
+a,
+a:hover {
   color: inherit;
 }

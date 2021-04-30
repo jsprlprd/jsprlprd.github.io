@@ -1,14 +1,16 @@
 ---
-- position: Founder & CEO, Head of Design
-  company: JSPR.Design
-  website: https://www.jspr.design
-  location: Tanza, Cavite, PH
-  start-date: May 12, 2021
-  end-date: 
-  descriptions: 
+# - common-position: Founder & CEO, Head of Design
+#   company: JSPR Design
+#   website: https://www.jspr.design
+#   location: Tanza, Cavite, PH
+#   start-date: May 12, 2021
+#   end-date: 
+#   descriptions: 
 
-- position: UI/UX Designer (Usability Engineer II)
+- common-position: UI/UX Designer
+  position:  UI/UX Designer (Usability Engineer II)
   company: Samsung Research Philippines
+  short-company: Samsung
   website: https://research.samsung.com/srph
   location: Taguig, Manila, PH
   start-date: March 9, 2020
@@ -18,7 +20,8 @@
   - Define and work on User Experience core principles and concepts for User Interface design using derived insights and analysis that provides meaningful values to target users and the company
   - Manage and oversee as to ensure that commercializable output information architecture, workflow, and layout are materialized within the given timeline and resources by carrying out detailed scenarios created on the UX core principles and concept.
   - Perform self-validation such as rapid prototyping and external validation, and incorporate the validation outcome to the final output for improvement.
-- position: UI/UX Designer (Svc Info Developer III)
+- common-position: UI/UX Designer
+  position: UI/UX Designer (Svc Info Developer III)
   company: DXC Technology
   website: https://www.dxc.technology/
   location: Taguig, Manila, PH
@@ -41,15 +44,16 @@
   - Represents the user experience design team for all phases of larger and more-complex
     development and design projects and programs
   - Provides guidance and mentoring to less-experienced staff members
-- position: UI/UX Designer (Part Time)
-  company: Phollowup
-  website: https://phollowup.com/
-  location: Remote / Work From Home
-  start-date: August 6, 2018
-  end-date: March 25, 2019
-  descriptions: 
-- position: Senior UI/UX Designer
+# - common-position: UI/UX Designer (Part Time)
+#   company: Phollowup
+#   website: https://phollowup.com/
+#   location: Remote / Work From Home
+#   start-date: August 6, 2018
+#   end-date: March 25, 2019
+#   descriptions: 
+- common-position: Senior UI/UX Designer
   company: Technology Elite (EmployeeConnect Pty Ltd)
+  short-company: EmployeeConnect
   website: https://www.employeeconnect.com/
   location: Clark Freeport Zone, Pampanga, PH
   start-date: October 3, 2017
@@ -64,7 +68,7 @@
   - Translate required UX to the best UI practices
   - Analyze and troubleshoot UI/UX problems (e.g. responsiveness) and create on-brand
     design solutions that meet business goals and requirements
-- position: UI Designer &amp; Front-End Developer
+- common-position: UI Designer &amp; Front-End Developer
   company: Sprout Solutions
   website: https://sprout.ph/
   location: Taguig, Manila, PH
@@ -80,8 +84,9 @@
   - Create quality mockups and prototypes
   - Help back-end developers with coding and troubleshooting
   - Ensure high quality graphic standards and brand consistency
-- position: User Interface Designer
+- common-position: User Interface Designer
   company: Trend Micro Philippines
+  short-company: Trend Micro
   website: https://www.trendmicro.com
   location: Pasig, Manila, PH
   start-date: May 18, 2015
@@ -118,7 +123,7 @@
     url: https://success.trendmicro.com
   - name: Trend Micro | Design System
     url: 
-- position: Web Developer
+- common-position: Web Developer
   company: TaskUs
   website: https://www.taskus.com
   location: Bacoor, Cavite, PH
@@ -129,7 +134,7 @@
   - Handles programming of web projects
   - Works closely with the E-learning Specialist for various projects
   - Helps the group conceptualize new programs for the learning portal
-- position: Graphic Designer
+- common-position: Graphic Designer
   company: Sports Bookie Online
   website: http://www.runningmancorporation.com/
   location: Makati, Manila, PH
