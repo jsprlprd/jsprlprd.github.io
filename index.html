@@ -13,45 +13,45 @@ transition:
         <img class="rounded-circle" src="{{ site.baseurl }}/assets/img/profile-picture.jpg" width="176" height="176" alt="">
       </div>
       <div class="media-content align-self-center">
-        <h1 class="heading-title display-3">Hi! I'm <b>Jasper</b>.<br>I <b>design</b> stuffs.</h1>
-        <p class="heading-subtitle">I'm a Full-Stack Designer based in the Philippines. I love to solve design problems and isn't afraid to code.</p>  
-        <!-- <a class="btn btn-outline-primary btn-lg rounded" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jsprlprd'});return false;">Book a Consultation</a> -->
-        <!-- <p>Connect with <a href="mailto:{{ site.data.personal-information.email-address }}">me@jasperlepardo.com</a></p> -->
+        <div class="heading pt-0">
+          <h1 class="heading-title">Hi! I'm <b>Jasper</b>.<br>I <b>design</b> stuffs.</h1>
+          <p class="heading-subtitle lead">I'm a Full-Stack Designer based in the Philippines. I love to solve design problems and isn't afraid to code.</p>  
+        </div>
+        <div class="grid" id="whoiam">
+          <div>
+            <!-- <img class="mb-3" src="/assets/img/design-tool.svg" alt="" width="48"> -->
+            <p class="lead"><b>Designer</b></p>
+            <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+          </div>
+          <div>
+            <!-- <img class="mb-3" src="/assets/img/code.svg" alt="" width="48"> -->
+            <p class="lead"><b>Coder</b></p>
+            <p>I enjoy coding my own designs with modern HTML, CSS and basic JavaScript.</p>
+          </div>
+          <div>
+            <!-- <img class="mb-3" src="/assets/img/solution.svg" alt="" width="48"> -->
+            <p class="lead"><b>Thinker</b></p>
+            <p>I love solving business problems with design solutions that delights the users.</p>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
 
-  <div class="grid" id="whoiam">
-    <div>
-      <img class="mb-3" src="/assets/img/design-tool.svg" alt="" width="48">
-      <h3 class="card-title"><b>Designer</b></h3>
-      <p class="card-text">I value simple content structure, clean design patterns, and thoughtful interactions.</p>
-    </div>
-    <div>
-      <img class="mb-3" src="/assets/img/code.svg" alt="" width="48">
-      <h3 class="card-title"><b>Coder</b></h3>
-      <p class="card-text">I enjoy coding my own designs with modern HTML, CSS and basic JavaScript.</p>
-    </div>
-    <div>
-      <img class="mb-3" src="/assets/img/solution.svg" alt="" width="48">
-      <h3 class="card-title"><b>Thinker</b></h3>
-      <p class="card-text">I love solving business problems with design solutions that delights the users.</p>
-    </div>
-  </div>
-</div>
+
 
 
 <div class="wrapper">
   <div class="heading">
-    <!-- <h2 class="heading-title">Over the past 6 years, I've designed products and helped tailor experiences for some amazing brands.</h2> -->
-    <h1 class="heading-title">My Experience.</h1>
+    <h2 class="heading-title">My Experience.</h2>
     <p class="heading-subtitle lead">Over the past 6 years, I've designed products and helped tailor experiences for some amazing brands.</p>
   </div>
   <div class="grid" id="work-exprience">
     {% for work in site.data.resume.employment-history %}
       <div>
-        <h3 class="mb-0"><a href="{{ work.website }}" target=”_blank”>{% if work.short-company %} {{ work.short-company }} {% else %} {{ work.company }} {% endif %}</a></h3>
-        <p>{% if work.common-position %} {{ work.common-position }} {% else %} {{ work.position }} {% endif %}</p>
+        <p class="lead mb-0"><b><a href="{{ work.website }}" target=”_blank”>{% if work.short-company %} {{ work.short-company }} {% else %} {{ work.company }} {% endif %}</a></b></p>
+        <p class="mb-0">{% if work.common-position %} {{ work.common-position }} {% else %} {{ work.position }} {% endif %}</p>
         <p class="text-muted mb-0">{{ work.start-date | date: "%b %Y" }} <i>to</i> {% if work.end-date %}{{ work.end-date | date: "%b %Y" }}{% else %}Present {% endif %}</p>
       </div>
     {% endfor %}
@@ -60,7 +60,7 @@ transition:
 
 <div class="wrapper">
   <div class="heading">
-    <h1 class="heading-title">My Works.</h1>
+    <h2 class="heading-title">My Works.</h2>
   </div>
   <div class="grid" id="portfolio">
     {% assign works = site.works | where: "categories", "featured"%}
@@ -77,7 +77,7 @@ transition:
               <li class="list-inline-item">{{ tag }}</li>
             {% endfor %}
           </ul>
-          <h3 class="card-title"><b>{{ work.title }}</b></h3>
+          <p class="card-title lead"><b>{{ work.title }}</b></p>
           <p class="card-text">{{ work.description }}</p>
         </div>
       </a>

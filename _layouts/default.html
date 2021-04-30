@@ -29,20 +29,24 @@ custom-stylesheet:
   {{ content }}
 </main>
 
-<footer class="bg-dark text-white d-print-none">
+<footer class="d-print-none">
   <div class="container">
-    <div class="heading">
-      <h1 class="heading-title display-1">Let's connect.</h1>
-      <h3 class="heading-title">email <a href="mailto:{{ site.data.personal-information.email-address }}">{{ site.data.personal-information.email-address }}</a></h1>  
+    <h2 class="">Say Hello.</h2>
+    <div class="row">
+      <div class="col-lg">
+        <p class="lead mb-0">email <a href="mailto:{{ site.data.personal-information.email-address }}">{{ site.data.personal-information.email-address }}</a></p>
+      </div>
+      <div class="col-lg-auto">
+        <!-- <p><b>Social Media</b></p> -->
+        <ul class="list-inline" id="social-media">
+          {% for social-media in site.data.personal-information.social-media %}
+            <li class="list-inline-item">
+              <a href="{{ social-media.url }}"><i class="{{ social-media.icon }}"></i></a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
-    <p><b>Social Media</b></p>
-    <ul class="list-inline" id="social-media">
-      {% for social-media in site.data.personal-information.social-media %}
-        <li class="list-inline-item">
-          <a href="{{ social-media.url }}"><i class="{{ social-media.icon }}"></i></a>
-        </li>
-      {% endfor %}
-    </ul>
     <p>Copyright © <span id="current-year"></span> Jasper Lepardo. <br class="d-lg-none"/> All rights reserved.</p>
   </div>
 </footer>
