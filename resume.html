@@ -11,8 +11,8 @@ transition:
       <img class="profile-picture rounded" src="{{ site.baseurl }}/assets/img/profile-picture.jpg" alt="" />
     </div>
     <div class="col-md-8 align-self-center text-center text-md-left">
-      <h1><b>{{ site.data.personal-information.name }}</b></h1>
-      <p class="lead text-muted">{{ site.data.personal-information.title }}</p>
+      <h1>{{ site.data.personal-information.name }}</h1>
+      <p class="lead">{{ site.data.personal-information.title }}</p>
       <ul class="list-unstyled list-columns two-columns" id="details-section">
         <li>
           <a href="tel:{{ site.data.personal-information.mobile-number }}"><i class="fas fa-mobile-alt"></i>{{ site.data.personal-information.mobile-number }}</a>
@@ -30,18 +30,17 @@ transition:
 
 <div class="row">
   <div class="col-12 col-md-4">
-
-    <h4><b>About</b></h4>
+    <h3 class="h4">About</h3>
     <p>{{ site.data.personal-information.summary }}</p>
 
-    <h4><b>Skills</b></h4>
+    <h3 class="h4">Skills</h3>
     <ul class="list-inline">
       {% for skills in site.data.personal-information.skills %}
         <li class="list-inline-item">{{ skills }}</li>
       {% endfor %}
     </ul>
 
-    <h4><b>Tools</b></h4>
+    <h3 class="h4">Tools</h3>
 
     <p><b>Design</b></p>
     <ul class="list-inline">
@@ -61,7 +60,7 @@ transition:
       {% endfor %}
     </ul>
 
-    <h4><b>Trainings/Seminars</b></h4>
+    <h3 class="h4">Trainings/Seminars</h3>
     <ul class="list-unstyled" id="reference-section">
       {% for workshop in site.data.resume.trainings-and-seminars %}
         <li>
@@ -72,7 +71,7 @@ transition:
       {% endfor %}
     </ul>
 
-    <h4><b>Awards &amp; Recognition</b></h4>
+    <h3 class="h4"><b>Awards &amp; Recognition</b></h3>
     <ul class="list-unstyled" id="reference-section">
       {% for award in site.data.resume.awards-and-recognition %}
         <li>
@@ -84,7 +83,7 @@ transition:
       {% endfor %}
     </ul>
   
-    <!-- <h4><b>Reference</b></h4>
+    <!-- <h3 class="h4"><b>Reference</b></h3>
     <ul class="list-unstyled" id="reference-section">
       {% for reference in site.data.resume.references %}
         <li>
@@ -108,16 +107,23 @@ transition:
 
   <div class="col-12 col-md-8">
 
-    <h3><b>Work Experiences</b></h3>
+    <h2 class="h3">Work Experiences</h2>
     {% for work in site.data.resume.employment-history %}
     <div class="row">
       <div class="col-lg-3">{{ work.start-date | date: "%b '%y" }} <i>to</i> {% if work.end-date %}{{ work.end-date | date: "%b '%y" }}{% else %}Present {% endif %}</div>
       <div class="col-lg-9">
         <p>
-          <span class="lead"><b>{{ work.position }}</b></span><br/>
-          <span class="text-muted">{{ work.company }} - {{ work.location }}</span>
+          <span><b>{{ work.position }}</b></span><br/>
+          {{ work.company }} - {{ work.location }}
         </p>
-        {% if work.summary %}
+
+        <ul class="small">
+          {% for desciption in work.descriptions %}
+          <li>{{ desciption }}</li>
+          {% endfor %}
+        </ul>
+
+        <!-- {% if work.summary %}
           {% for summary in work.summary %}
             <p>{{ summary }}</p>
           {% endfor %}
@@ -127,16 +133,16 @@ transition:
             <li>{{ desciption }}</li>
             {% endfor %}
           </ul>
-        {% endif %}
+        {% endif %} -->
 
-        {% if work.projects %}
+        <!-- {% if work.projects %}
           <p><b>Key Projects/Achievements</b></p>
           <ul>
             {% for project in work.projects %}
             <li><a target="_blank" href="{{ project.url }}">{{ project.name }}</a></li>
             {% endfor %}
           </ul>
-        {% endif %}
+        {% endif %} -->
       </div>
     </div>
     {% endfor %}
@@ -146,11 +152,11 @@ transition:
       <div class="row">
         <div class="col-md-3">
           {{ education.level }}<br/>
-          {{ education.start-date }} - {{ education.end-date }}
+          {{ education.start-date }} {% if education.start-date %}-{% endif %} {{ education.end-date }}
         </div>
         <div class="col-md-9">
           <p>
-            <span class="lead"><b>{{ education.degree }}</b></span> <br/>
+            <span><b>{{ education.degree }}</b></span> <br/>
             {{ education.institution }}<br/>
             <i>{{ education.location }}</i>
           </p>

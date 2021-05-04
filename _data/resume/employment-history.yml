@@ -7,10 +7,8 @@
 #   end-date: 
 #   descriptions: 
 
-- common-position: UI/UX Designer
-  position:  UI/UX Designer (Usability Engineer II)
+- position:  UI/UX Designer (Usability Engineer II)
   company: Samsung Research Philippines
-  short-company: Samsung
   website: https://research.samsung.com/srph
   location: Taguig, Manila, PH
   start-date: March 9, 2020
@@ -20,8 +18,7 @@
   - Define and work on User Experience core principles and concepts for User Interface design using derived insights and analysis that provides meaningful values to target users and the company
   - Manage and oversee as to ensure that commercializable output information architecture, workflow, and layout are materialized within the given timeline and resources by carrying out detailed scenarios created on the UX core principles and concept.
   - Perform self-validation such as rapid prototyping and external validation, and incorporate the validation outcome to the final output for improvement.
-- common-position: UI/UX Designer
-  position: UI/UX Designer (Svc Info Developer III)
+- position: UI/UX Designer (Svc Info Developer III)
   company: DXC Technology
   website: https://www.dxc.technology/
   location: Taguig, Manila, PH
@@ -51,7 +48,7 @@
 #   start-date: August 6, 2018
 #   end-date: March 25, 2019
 #   descriptions: 
-- common-position: Senior UI/UX Designer
+- position: Senior UI/UX Designer
   company: Technology Elite (EmployeeConnect Pty Ltd)
   short-company: EmployeeConnect
   website: https://www.employeeconnect.com/
@@ -68,7 +65,7 @@
   - Translate required UX to the best UI practices
   - Analyze and troubleshoot UI/UX problems (e.g. responsiveness) and create on-brand
     design solutions that meet business goals and requirements
-- common-position: UI Designer &amp; Front-End Developer
+- position: UI Designer &amp; Front-End Developer
   company: Sprout Solutions
   website: https://sprout.ph/
   location: Taguig, Manila, PH
@@ -84,22 +81,20 @@
   - Create quality mockups and prototypes
   - Help back-end developers with coding and troubleshooting
   - Ensure high quality graphic standards and brand consistency
-- common-position: User Interface Designer
+- position: User Interface Designer
   company: Trend Micro Philippines
-  short-company: Trend Micro
   website: https://www.trendmicro.com
   location: Pasig, Manila, PH
   start-date: May 18, 2015
   end-date: March 24, 2017
-  descriptions: Collaborate with project management and engineering to define and
-    implement innovative solutions for the product direction, visuals and experience,Execute
-    all visual design stages from concept to final hand-off to engineering,Conceptualize
-    original ideas that bring simplicity and user friendliness to complex design roadblocks,Create
-    wireframes, storyboards, user flows, process flows and site maps to effectively
-    communicate interaction and design ideas,Present and defend designs and key milestone
-    deliverables to peers and executive level stakeholders,Conduct user research and
-    evaluate user feedback,Establish and promote design guidelines, best practices
-    and standards
+  descriptions:
+  - Collaborate with project management and engineering to define and implement innovative solutions for the product direction, visuals and experience;
+  - Execute all visual design stages from concept to final hand-off to engineering;
+  - Conceptualize original ideas that bring simplicity and user friendliness to complex design roadblocks;
+  - Create wireframes, storyboards, user flows, process flows and site maps to effectively communicate interaction and design ideas;
+  - Present and defend designs and key milestone deliverables to peers and executive level stakeholders;
+  - Conduct user research and evaluate user feedback;
+  - Establish and promote design guidelines, best practices and standards
   summary:
   - As one of the leading anti-virus company, serving 30% of the enterprise market
     worldwide, giving the best customer support is key to the their success.
@@ -123,7 +118,7 @@
     url: https://success.trendmicro.com
   - name: Trend Micro | Design System
     url: 
-- common-position: Web Developer
+- position: Web Developer
   company: TaskUs
   website: https://www.taskus.com
   location: Bacoor, Cavite, PH
@@ -134,7 +129,7 @@
   - Handles programming of web projects
   - Works closely with the E-learning Specialist for various projects
   - Helps the group conceptualize new programs for the learning portal
-- common-position: Graphic Designer
+- position: Graphic Designer
   company: Sports Bookie Online
   website: http://www.runningmancorporation.com/
   location: Makati, Manila, PH
